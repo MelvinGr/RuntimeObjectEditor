@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B9D2B5B-29EF-4B21-B6BE-538060F27E93}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>RuntimeObjectEditor</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RuntimeObjectEditor</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;NO_HOOK1;NET2</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hotkey\HotKeyUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hotkey\HotKeyWatch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RuntimeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RuntimeEditor.Designer.cs">
+      <DependentUpon>RuntimeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RuntimeEditorHook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Events\EventInfoConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Events\EventListenerPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Events\EventPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Events\InstanceEventsTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Fields\AllFieldsTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Fields\FieldPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\EditObjectCustomTypeDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodEditingConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodsTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\MethodUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\ParameterPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Methods\ReturnParameterDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\ProcessInfo\ApplicationInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\ProcessInfo\ChildTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\ProcessInfo\ProcessInfoTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\ProcessInfo\ReroutedPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Tabs\Properties\AllPropertiesTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\AbstractPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\AttributeUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\FieldAccesor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Generate\ClassGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\IRealValueHolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\NativeUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\PropertyDescriptorUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\RemapPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\ShowChildListConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\StaticPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WindowFinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\XPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Hotkey\HotKeyWatch.resx">
+      <DependentUpon>HotKeyWatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Resources\CustomProperties.bmp" />
+    <Content Include="Resources\Events.bmp" />
+    <Content Include="Resources\Eye.bmp" />
+    <Content Include="Resources\Eye.cur" />
+    <Content Include="Resources\Eye.ico" />
+    <Content Include="Resources\Fields.bmp" />
+    <Content Include="Resources\Methods.bmp" />
+    <Content Include="Resources\ProcessInfo.bmp" />
+    <EmbeddedResource Include="RuntimeEditor.resx">
+      <DependentUpon>RuntimeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFinder.resx">
+      <DependentUpon>WindowFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\XPropertyGrid.resx">
+      <DependentUpon>XPropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
